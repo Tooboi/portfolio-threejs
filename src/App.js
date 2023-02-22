@@ -8,11 +8,13 @@ import { OrbitControls, useGLTF, SpotLight, useDepthBuffer, Environment, Reflect
 
 import Character3 from './assets/Character3.jsx';
 
+const deg2rad = degrees => degrees * (Math.PI / 180);
+
 function GroundPlane() {
   return (
-    <mesh receiveShadow rotation={[5, 0, 0]} position={[0, 0, 0]}>
-      <planeBufferGeometry attach="geometry" args={[500, 500]} />
-      <meshStandardMaterial attach="material" color="white" />
+    <mesh receiveShadow rotation={[deg2rad(-90), 0, 0]} position={[0, 0, 0]}>
+      <planeGeometry attach="geometry" args={[500, 500]} />
+      <meshStandardMaterial attach="material" color="#2c2c2c" />
     </mesh>
   );
 }
@@ -21,11 +23,12 @@ function GroundPlane() {
 
 const App = () => {
   return (
-    <Canvas concurrent shadows camera={{ fov: 20, far: 100, position: [0, -10, 50], zoom: 1.5 }}>
-      {/* <ambientLight intensity={0.1} /> */}
+    <Canvas shadows camera={{ fov: 10, far: 100 }}>
+      {/* <fog attach="fog" args={['#1c1c1c', 60, 100]} /> */}
       <OrbitControls />
       <Suspense fallback={null}>
         <Environment preset="sunset" />
+        <spotLight position={[50, 50, -30]} castShadow />
         <Character3 />
         <GroundPlane />
       </Suspense>
