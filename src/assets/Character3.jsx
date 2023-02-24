@@ -17,7 +17,7 @@ const Character3 = (props) => {
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group name="Armature" rotation={[Math.PI / 2, 0, 0]}>
+        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} position={[0, -2.1, 20]}>
           <primitive object={nodes.mixamorigHips} />
           <group name="TeethTop001">
             <skinnedMesh name="TeethTopmesh002" geometry={nodes.TeethTopmesh002.geometry} material={materials.Eyemat} skeleton={nodes.TeethTopmesh002.skeleton} />
