@@ -26,28 +26,6 @@ const Overlay = forwardRef(({ caption, scroll }, ref) => (
         rocket engine.
       </div>
     </div>
-    <div style={{ height: "200vh" }}>
-      <div className="dot">
-        <h1>turbine</h1>A turbine (/sdfgsdf/ or /dsfgs/) (from the Greek τύρβη, tyrbē, or Latin turbo, meaning vortex)[1][2] is a rotary mechanical device that extracts energy
-        from a fluid flow and converts it into useful work.
-      </div>
-    </div>
-    <div style={{ height: "200vh" }}>
-      <div className="dot">
-        <h1>table</h1>A table is an item of furniture with a flat top and one or more legs, used as a surface for working at, eating from or on which to place things.[1][2]
-      </div>
-    </div>
-    <div style={{ height: "200vh" }}>
-      <div className="dot">
-        <h1>laptop</h1>A laptop, laptop computer, or notebook computer is a small, portable personal computer (PC) with a screen and alphanumeric keyboard.
-      </div>
-    </div>
-    <div style={{ height: "200vh" }}>
-      <div className="dot">
-        <h1>zeppelin</h1>A Zeppelin is a type of rigid airship named after the German inventor Count Ferdinand von Zeppelin (German pronunciation: [ˈt͡sɛpəliːn]) who pioneered rigid
-        airship development at the beginning of the 20th century.
-      </div>
-    </div>
     <span className="caption" ref={caption}>
       0.00
     </span>
